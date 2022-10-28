@@ -1,0 +1,52 @@
+ <html>
+    <head>
+        <title>SB HTML Editor</title>
+    </head>
+    <style>
+        div{
+            position: relative;
+        }
+        #sh{
+            border: 1;
+            display: flex;
+            left: 50%;
+           
+        }
+       
+        #inp{
+            border-radius: 15px;
+            height: 70%;
+            width: 50%;
+            box-sizing: content-box;
+        }
+        #greetings{
+            color: black;
+        }
+    </style>
+    <body>
+        <h1 id="greetins">Hello</h1>  
+
+     
+    </body>
+    <script>
+        t=1
+        name=prompt("Please Enter Your Name");
+        greet=document.getElementById("greetins");
+        greet.innerHTML=greet.innerHTML+"\t"+name;
+        document.write("<Textarea type='text' id='inp' name='program' height='200' widht='200' onclick='op()'></Textarea><hr>OUTPUT:<h1 id='sh' ></h1><hr>");
+        n=document.getElementById("sh");        
+        tb=document.getElementById("inp");
+        
+	function op(){
+        if(tb.value!=null){
+            
+            n.innerHTML=tb.value;
+            //document.write(tb.value);
+        }
+        else{
+            document.write("<h1>enter your code in text box to get output</h1>")
+        }
+        setTimeout("op()",t);
+	}
+    </script>
+ </html>
